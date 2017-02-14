@@ -7,12 +7,6 @@
            [java.awt.event KeyEvent]
            [javax.imageio ImageIO]))
 
-(defn -main
-  "I don't do a whole lot ... yet."
-  [& args]
-  (println "Hello, World!"))
-
-
 (def level1
   [[1 1 1 1 1 1 1 1 1]
    [1 3 2 0 0 0 2 3 1]
@@ -129,11 +123,12 @@
         _    (.start t)]
     t))
 
-(def screen (r/create-screen 10 10))
-(def big-screen (r/create-screen 512 512))
-(def big-canvas (r/create-canvas 512 512))
-(def player (create-player 5 5 70))
-(defn test-window [] (r/create-window big-canvas))
-(defn test [] (r/cast-rays screen player level1))
-(defn test2 [] (r/render-info screen player level1))
-(defn test3 [] (r/render-frame big-screen player level1))
+(comment
+  (def screen (r/create-screen 10 10))
+  (def big-screen (r/create-screen 512 512))
+  (def big-canvas (r/create-canvas 512 512))
+  (def player (create-player 5 5 70))
+  (defn test-window [] (r/create-window big-canvas))
+  (defn test [] (r/cast-rays screen player level1))
+  (defn test2 [] (r/render-info screen player level1))
+  (defn test3 [] (r/render-frame big-screen player level1)))
